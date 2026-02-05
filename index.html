@@ -1,501 +1,502 @@
-<!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================================================
-    Portfolio (Vanilla) — Single Page
-    - Semantic HTML5
-    - Custom CSS (no frameworks)
-    - Vanilla JS for typed effect, active nav, scroll reveal, mobile menu
-    - GitHub Pages friendly (relative paths)
-  ========================================================== -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <!-- ======================================================
+       Basic Meta
+  ======================================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amirtha Varshini Sugumaran — Software Engineer | Business Analyst | Data Analyst. Portfolio for Ireland/EU roles." />
   <title>Amirtha Varshini Sugumaran | Portfolio</title>
-  <meta name="description" content="Hybrid profile: Business Analyst + Software Engineer + Data Analyst. Portfolio for Ireland/EU roles." />
 
+  <!-- ======================================================
+       CSS
+  ======================================================= -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Skip link (accessibility) -->
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- =========================
-    Header / Sticky Navigation
-  ========================== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <!-- Brand -->
-      <a class="brand" href="#hero" aria-label="Go to top">
-        <span class="brand-mark" aria-hidden="true">AV</span>
+  <!-- ======================================================
+       Header / Nav
+  ======================================================= -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Go to top">
+        <span class="brand-mark">AV</span>
         <span class="brand-text">Amirtha Varshini</span>
       </a>
 
-      <!-- Mobile toggle -->
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
 
-      <!-- Nav -->
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="#hero" data-nav>Home</a></li>
-          <li><a class="nav-link" href="#about" data-nav>About</a></li>
-          <li><a class="nav-link" href="#services" data-nav>Capabilities</a></li>
-          <li><a class="nav-link" href="#skills" data-nav>Skills</a></li>
-          <li><a class="nav-link" href="#projects" data-nav>Projects</a></li>
-          <li><a class="nav-link" href="#contact" data-nav>Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="nav-links" role="list">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#work">Work</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+
+        <!-- Light/Dark Toggle -->
+        <li class="theme-switch">
+          <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle dark mode">
+            Theme
+          </button>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- =========================
-    Main
-  ========================== -->
-  <main id="main">
-    <!-- =========================
-      HERO
-    ========================== -->
-    <section id="hero" class="section hero">
-      <div class="container hero-grid">
-        <!-- Left -->
-        <div class="hero-content">
-          <p class="eyebrow reveal">Ireland / EU-ready hybrid profile</p>
+  <!-- ======================================================
+       Hero
+  ======================================================= -->
+  <main id="home">
+    <section class="hero container reveal">
+      <div class="hero-content">
+        <p class="eyebrow">Ireland / EU Ready • Backend-first • Analytics + Engineering</p>
 
-          <h1 class="hero-title reveal">
-            Amirtha Varshini
-            <span class="hero-title-sub">Sugumaran</span>
-          </h1>
+        <h1 class="hero-title">
+          Amirtha Varshini Sugumaran
+        </h1>
 
-          <p class="hero-role reveal">
-            <span class="muted">I build solutions across</span>
-            <span class="typed-wrap">
-              <span id="typed" class="typed" aria-live="polite"></span>
-              <span class="typed-caret" aria-hidden="true"></span>
-            </span>
-          </p>
+        <p class="hero-subtitle">
+          <span class="typed-wrap">
+            <span class="typed-label">Role:</span>
+            <span id="typed-role" class="typed-role" aria-live="polite"></span>
+            <span class="typed-cursor" aria-hidden="true">|</span>
+          </span>
+        </p>
 
-          <p class="hero-summary reveal">
-            Hybrid professional combining <strong>Business Analysis</strong>, <strong>Backend Engineering</strong>, and
-            <strong>Data Analytics</strong> to deliver measurable outcomes—clear requirements, reliable APIs,
-            and decision-ready insights.
-          </p>
+        <p class="hero-summary">
+          Backend-focused engineer with experience building Python services, REST APIs, and database-backed workflows.
+          Strong analytics foundation (SQL + dashboards) and comfortable collaborating across product, ops, and stakeholders.
+        </p>
 
-          <div class="hero-cta reveal">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <!-- Replace href with your hosted resume (PDF) -->
-            <a class="btn btn-secondary" href="assets/Amirtha_Varshini_Resume.pdf" target="_blank" rel="noopener">
-              Download Resume
-            </a>
-          </div>
-
-          <div class="hero-meta reveal">
-            <a class="chip" href="mailto:amirthasugumaran1410@gmail.com" aria-label="Email">
-              <!-- icon -->
-              <span class="chip-ico" aria-hidden="true">✉</span>
-              <span>amirthasugumaran1410@gmail.com</span>
-            </a>
-            <a class="chip" href="https://www.linkedin.com/in/amirtha-varshini-sugumaran" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <span class="chip-ico" aria-hidden="true">in</span>
-              <span>LinkedIn</span>
-            </a>
-            <a class="chip" href="https://github.com/Amirtha-Varshini-Sugumaran" target="_blank" rel="noopener" aria-label="GitHub">
-              <span class="chip-ico" aria-hidden="true">⌁</span>
-              <span>GitHub</span>
-            </a>
-          </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <!-- Replace resume.pdf with your actual file path once uploaded -->
+          <a class="btn btn-outline" href="resume.pdf" target="_blank" rel="noopener">Open Resume (PDF)</a>
         </div>
 
-        <!-- Right / Hero card -->
-        <aside class="hero-card reveal">
-          <div class="hero-card-inner">
-            <div class="avatar" aria-hidden="true">
-              <!-- Replace with your photo: <img src="assets/profile.jpg" alt="Amirtha Varshini"> -->
-              <div class="avatar-placeholder">Profile Photo</div>
-            </div>
+        <div class="hero-links">
+          <!-- Replace with your real links -->
+          <a href="https://github.com/Amirtha-Varshini-Sugumaran" target="_blank" rel="noopener">GitHub</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/amirtha-varshini-sugumaran" target="_blank" rel="noopener">LinkedIn</a>
+          <span>•</span>
+          <a href="mailto:amirthasugumaran1410@gmail.com">Email</a>
+        </div>
+      </div>
 
-            <div class="hero-card-body">
-              <h2 class="hero-card-title">What I bring</h2>
-              <ul class="bullet">
-                <li><strong>Business clarity</strong> — requirements, workflows, stakeholder alignment</li>
-                <li><strong>Backend reliability</strong> — Python, APIs, DB modeling, testing</li>
-                <li><strong>Data-driven insight</strong> — dashboards, KPI design, analysis automation</li>
+      <div class="hero-card reveal">
+        <div class="profile-placeholder" aria-hidden="true">
+          <span>Profile Image</span>
+        </div>
+
+        <ul class="quick-facts" role="list">
+          <li><strong>Primary:</strong> Software Engineering (Backend)</li>
+          <li><strong>Secondary:</strong> Business Analysis</li>
+          <li><strong>Also:</strong> Data Analytics</li>
+          <li><strong>Stack:</strong> Python • SQL • APIs • PostgreSQL • AWS • Docker</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         About (short)
+    ======================================================= -->
+    <section class="section container reveal" id="about" aria-label="About">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>Short professional overview for hiring managers.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I work at the intersection of software engineering and analytics: building reliable backend APIs and data workflows,
+            and translating business needs into measurable outputs. I prioritize clean structure, testing, and maintainable design.
+          </p>
+          <p>
+            I’m currently focused on portfolio-grade backend projects and presenting my work clearly for SWE roles in the Ireland/EU market.
+          </p>
+        </div>
+
+        <div class="about-highlights">
+          <div class="mini-card">
+            <h3>Strengths</h3>
+            <ul role="list">
+              <li>Backend APIs & DB workflows</li>
+              <li>SQL analysis + reporting automation</li>
+              <li>Clear documentation & stakeholder alignment</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h3>Exposure</h3>
+            <ul role="list">
+              <li>DSA (applied for optimization)</li>
+              <li>AWS services & deployment basics</li>
+              <li>Frontend integration (basic)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         Work Experience (FIRST)
+    ======================================================= -->
+    <section class="section container reveal" id="work" aria-label="Work Experience">
+      <div class="section-head">
+        <h2>Work Experience</h2>
+        <p>Relevant roles summarized for SWE + Analytics alignment.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- SWE Role -->
+        <article class="timeline-item">
+          <header class="timeline-head">
+            <h3>Software Engineer (Backend / Systems)</h3>
+            <p class="muted">
+              VNS RCM Technologies Pvt Ltd, Chennai • Dec 2023 – Sep 2024 • India
+            </p>
+          </header>
+
+          <div class="timeline-body">
+            <div class="project-block">
+              <h4>Selected Project 1 — Backend Automation & API Workflows</h4>
+              <ul>
+                <li>Built Python backend modules and REST API integrations to support operational workflows and reporting needs.</li>
+                <li>Worked with relational databases (PostgreSQL) for data extraction/validation and consistent system outputs.</li>
+                <li>Collaborated with UI stakeholders and supported basic frontend integration for internal visibility (React exposure).</li>
               </ul>
+              <p class="skills-line"><strong>Skills:</strong> Python, SQL/PostgreSQL, REST APIs, Data validation, Git/GitHub, React (basic), Testing exposure</p>
+            </div>
 
-              <div class="hero-card-stats">
-                <div class="stat">
-                  <span class="stat-num">3</span>
-                  <span class="stat-label">Core pillars</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-num">EU</span>
-                  <span class="stat-label">Market focus</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-num">MVP</span>
-                  <span class="stat-label">Delivery mindset</span>
-                </div>
-              </div>
+            <div class="project-block">
+              <h4>Selected Project 2 — Reporting Automation & Data Quality Checks</h4>
+              <ul>
+                <li>Automated recurring reporting workflows and verification checks using Python scripts.</li>
+                <li>Created repeatable SQL queries to extract and reconcile data across operational datasets.</li>
+                <li>Maintained documentation and supported release hygiene through version control practices.</li>
+              </ul>
+              <p class="skills-line"><strong>Skills:</strong> Python (Pandas/NumPy), SQL, ETL concepts, Data reconciliation, Documentation, Git</p>
             </div>
           </div>
-        </aside>
-      </div>
+        </article>
 
-      <!-- subtle background decoration -->
-      <div class="hero-bg" aria-hidden="true"></div>
+        <!-- Intern Role -->
+        <article class="timeline-item">
+          <header class="timeline-head">
+            <h3>Business Systems & Data Analyst Intern</h3>
+            <p class="muted">
+              VNS RCM Technologies Pvt Ltd, Chennai • Jun 2023 – Dec 2023 • India
+            </p>
+          </header>
+
+          <div class="timeline-body">
+            <ul>
+              <li>Analyzed billing datasets using Python (Pandas/NumPy) and SQL to surface issues, trends, and reporting gaps.</li>
+              <li>Wrote SQL queries to extract, validate, and reconcile data across operational tables for consistent reporting.</li>
+              <li>Built KPI reports/dashboards and supported root-cause analysis for exceptions and process improvements.</li>
+            </ul>
+            <p class="skills-line"><strong>Skills:</strong> Python, Pandas, NumPy, SQL, KPI reporting, Power BI/Tableau/Excel (exposure), Stakeholder collaboration</p>
+          </div>
+        </article>
+
+        <!-- Part-time -->
+        <article class="timeline-item">
+          <header class="timeline-head">
+            <h3>Classroom Invigilator</h3>
+            <p class="muted">Maynooth University • Nov 2024 – Dec 2024 • Ireland</p>
+          </header>
+          <div class="timeline-body">
+            <ul>
+              <li>Ensured exam compliance and handled documentation reliably under time constraints.</li>
+              <li>Maintained discipline and addressed student queries professionally.</li>
+            </ul>
+            <p class="skills-line"><strong>Skills:</strong> Attention to detail, Process compliance, Communication</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- =========================
-      ABOUT
-    ========================== -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title">About</h2>
-          <p class="section-subtitle">
-            Professional hybrid profile suited to product teams and SaaS environments in Ireland/EU.
+    <!-- ======================================================
+         Education (SECOND)
+    ======================================================= -->
+    <section class="section container reveal" id="education" aria-label="Education">
+      <div class="section-head">
+        <h2>Education</h2>
+        <p>Academic background (GPA / classification).</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>MSc Business Analytics</h3>
+          <p class="muted">Maynooth University, Ireland • Sep 2024 – Present</p>
+          <p><strong>Grade:</strong> 2.1 Honours</p>
+        </article>
+
+        <article class="card">
+          <h3>BCom Business Analytics</h3>
+          <p class="muted">Sri Krishna College of Arts and Science, Coimbatore • Jul 2021 – Apr 2024</p>
+          <p><strong>Grade:</strong> 1.1 Honours (First Class with Distinction)</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         Projects (THIRD) — include all projects (non-work)
+    ======================================================= -->
+    <section class="section container reveal" id="projects" aria-label="Projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Portfolio projects and academic work (non-work projects listed here).</p>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project 1: EMBS -->
+        <article class="project-card">
+          <h3>Expense Management Backend System (EMBS)</h3>
+          <p class="muted">Backend API • Python • FastAPI • PostgreSQL • Docker</p>
+          <p>
+            Built a backend API to submit, list, approve, and reject expenses with enforced lifecycle rules and database persistence.
           </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-card reveal">
-            <h3 class="card-title">Summary</h3>
-            <p class="card-text">
-              I work at the intersection of <strong>requirements</strong>, <strong>systems</strong>, and <strong>data</strong>.
-              I’ve built backend services and workflows using Python and SQL, and delivered analytics outputs like KPI dashboards
-              that support operational decision-making.
-            </p>
-            <p class="card-text">
-              I’m comfortable translating ambiguity into clear scope, building pragmatic MVPs, and iterating with feedback.
-            </p>
+          <ul>
+            <li>FastAPI endpoints + Swagger/OpenAPI documentation.</li>
+            <li>PostgreSQL + SQLAlchemy ORM with repository separation.</li>
+            <li>Pytest coverage for core logic and API endpoints.</li>
+          </ul>
+          <p class="skills-line"><strong>Skills:</strong> Python, FastAPI, SQLAlchemy, PostgreSQL, Docker Compose, Pytest, OpenAPI</p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" target="_blank" rel="noopener">Docs</a>
           </div>
+        </article>
 
-          <div class="about-card reveal">
-            <h3 class="card-title">Focus Areas</h3>
-            <ul class="pill-list">
-              <li>Backend APIs &amp; Data Models</li>
-              <li>Process / Workflow Optimization</li>
-              <li>Analytics &amp; KPI Design</li>
-              <li>Documentation (BRD/FRD) &amp; Traceability</li>
-              <li>Testing &amp; Quality Checks</li>
-              <li>Stakeholder Communication</li>
+        <!-- Project 2: AI Skill Diagnostic Tool (PG) -->
+        <article class="project-card">
+          <h3>AI-Powered Skill Diagnostic Tool (PG Project)</h3>
+          <p class="muted">UI/UX + Frontend + Recommendation Integration</p>
+          <p>
+            Contributed UI/UX design and course recommendation integration for a skill-gap tool that maps missing skills to Coursera courses.
+          </p>
+          <ul>
+            <li>Designed UI layout in Figma and supported implementation in React.</li>
+            <li>Assisted course matching logic using regex + fuzzy similarity and validated output quality.</li>
+            <li>Helped scrape/format course metadata into standardized structure for processing.</li>
+          </ul>
+          <p class="skills-line"><strong>Skills:</strong> Figma, React, JavaScript, Regex, Fuzzy matching, Data formatting/cleaning</p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Project Link</a>
+            <a href="#" target="_blank" rel="noopener">Report</a>
+          </div>
+        </article>
+
+        <!-- Project 3: DPP Consulting -->
+        <article class="project-card">
+          <h3>Digital Product Passports (DPP) — Consulting & BI</h3>
+          <p class="muted">Power BI • Research • Dashboards</p>
+          <p>
+            Researched EU regulations and created BI dashboards to support compliance, lifecycle insights, and fraud indicators for an electronics client project.
+          </p>
+          <ul>
+            <li>Mapped regulatory obligations and structured insights for stakeholders.</li>
+            <li>Built Power BI dashboards for lifecycle/reliability and warranty/ownership views.</li>
+            <li>Produced a consulting report and delivered a client presentation.</li>
+          </ul>
+          <p class="skills-line"><strong>Skills:</strong> Research, Power BI, KPI definition, Reporting, Stakeholder presentation</p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Case Study</a>
+            <a href="#" target="_blank" rel="noopener">Slides</a>
+          </div>
+        </article>
+
+        <!-- Add others as cards (placeholders you can replace) -->
+        <article class="project-card">
+          <h3>Netflix Streaming Audience Segmentation</h3>
+          <p class="muted">Excel • Power BI • Regression (Academic)</p>
+          <ul>
+            <li>Segmented users using viewing habits and subscription patterns.</li>
+            <li>Cleaned data using Excel tools (PivotTables, Power Query, VBA).</li>
+            <li>Built dashboards in Excel/Power BI for engagement insights.</li>
+          </ul>
+          <p class="skills-line"><strong>Skills:</strong> Advanced Excel, Power Query, VBA, Power BI, Data analysis</p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Decision Support System — Retail Store Location Selection</h3>
+          <p class="muted">Excel • AHP • Decision modelling</p>
+          <ul>
+            <li>Built a decision support model to evaluate store locations.</li>
+            <li>Applied AHP methodology to prioritize criteria and rank alternatives.</li>
+            <li>Delivered structured recommendations with justification.</li>
+          </ul>
+          <p class="skills-line"><strong>Skills:</strong> Excel, AHP, Decision modelling, Analysis</p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>H&M Sustainability Case Study</h3>
+          <p class="muted">Framework-based analysis • ESG</p>
+          <ul>
+            <li>Analyzed sustainability issues: textile waste, transparency, greenwashing.</li>
+            <li>Applied frameworks: Triple Bottom Line, CSR Pyramid, ESG metrics, Stakeholder Theory.</li>
+            <li>Proposed strategies including demand prediction, supplier monitoring, circular practices.</li>
+          </ul>
+          <p class="skills-line"><strong>Skills:</strong> ESG analysis, Research, Structured frameworks, Strategic recommendations</p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         Skills (FOURTH)
+    ======================================================= -->
+    <section class="section container reveal" id="skills" aria-label="Skills">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Grouped and ATS-friendly.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <p>Python • SQL</p>
+        </div>
+        <div class="skill-card">
+          <h3>Backend & APIs</h3>
+          <p>FastAPI • REST APIs • OpenAPI/Swagger • ETL concepts</p>
+        </div>
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <p>PostgreSQL • SQLAlchemy • Query optimization basics</p>
+        </div>
+        <div class="skill-card">
+          <h3>Cloud & DevOps</h3>
+          <p>AWS (Lambda/S3/RDS) • Docker • Docker Compose • Git/GitHub • CI/CD exposure</p>
+        </div>
+        <div class="skill-card">
+          <h3>Testing</h3>
+          <p>Pytest • Unit/Integration testing exposure</p>
+        </div>
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <p>React (basic) • API-to-UI integration • HTML/CSS/JS</p>
+        </div>
+        <div class="skill-card">
+          <h3>Analytics</h3>
+          <p>Power BI • Tableau • Advanced Excel (Power Query, PivotTables, VBA)</p>
+        </div>
+        <div class="skill-card">
+          <h3>AI & Automation</h3>
+          <p>Regex • Fuzzy matching • Automation scripts • Pandas/NumPy</p>
+        </div>
+        <div class="skill-card">
+          <h3>DSA</h3>
+          <p>Exposure (applied for optimization)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         Contact
+    ======================================================= -->
+    <section class="section container reveal" id="contact" aria-label="Contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Let’s connect for roles in Ireland/EU.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="contact-form" onsubmit="return false;">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="your@email.com" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p class="muted small">
+            Note: This form is a placeholder. You can connect it later using Formspree or a backend endpoint.
+          </p>
+        </form>
+
+        <div class="contact-details">
+          <div class="mini-card">
+            <h3>Email</h3>
+            <a href="mailto:amirthasugumaran1410@gmail.com">amirthasugumaran1410@gmail.com</a>
+          </div>
+          <div class="mini-card">
+            <h3>Links</h3>
+            <ul role="list">
+              <li><a href="https://github.com/Amirtha-Varshini-Sugumaran" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/amirtha-varshini-sugumaran" target="_blank" rel="noopener">LinkedIn</a></li>
             </ul>
           </div>
-
-          <div class="about-card reveal">
-            <h3 class="card-title">Quick Info</h3>
-            <div class="kv">
-              <div class="kv-row"><span class="kv-k">Location</span><span class="kv-v">Dublin, Ireland</span></div>
-              <div class="kv-row"><span class="kv-k">Open to</span><span class="kv-v">SWE / BA / DA roles</span></div>
-              <div class="kv-row"><span class="kv-k">Availability</span><span class="kv-v">Replace with your status</span></div>
-              <div class="kv-row"><span class="kv-k">Work style</span><span class="kv-v">Agile / cross-functional</span></div>
-            </div>
+          <div class="mini-card">
+            <h3>Location</h3>
+            <p>Dublin, Ireland</p>
           </div>
         </div>
       </div>
+
+      <footer class="footer">
+        <p class="muted small">© <span id="year"></span> Amirtha Varshini Sugumaran. Built with HTML/CSS/JS.</p>
+      </footer>
     </section>
-
-    <!-- =========================
-      SERVICES / CAPABILITIES
-    ========================== -->
-    <section id="services" class="section section-alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title">Capabilities</h2>
-          <p class="section-subtitle">
-            Clear, measurable contributions across business, engineering, and analytics.
-          </p>
-        </div>
-
-        <div class="cards-3">
-          <article class="cap-card reveal">
-            <div class="cap-ico" aria-hidden="true">📌</div>
-            <h3 class="card-title">Business Analysis</h3>
-            <p class="card-text">
-              Requirements, process mapping, KPI definitions, documentation (BRD/FRD), and stakeholder communication.
-            </p>
-            <p class="card-foot muted">Replace with your strongest BA outcomes.</p>
-          </article>
-
-          <article class="cap-card reveal">
-            <div class="cap-ico" aria-hidden="true">⚙</div>
-            <h3 class="card-title">Software Engineering</h3>
-            <p class="card-text">
-              Python backend services, REST APIs, database modeling, testing, and containerized local development.
-            </p>
-            <p class="card-foot muted">Replace with your strongest SWE outcomes.</p>
-          </article>
-
-          <article class="cap-card reveal">
-            <div class="cap-ico" aria-hidden="true">📊</div>
-            <h3 class="card-title">Data Analytics</h3>
-            <p class="card-text">
-              Data cleaning, trend analysis, KPI dashboards, reporting automation, and insight storytelling.
-            </p>
-            <p class="card-foot muted">Replace with your strongest DA outcomes.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-      SKILLS
-    ========================== -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title">Skills</h2>
-          <p class="section-subtitle">
-            A practical set of tools used across projects and real-world workflows.
-          </p>
-        </div>
-
-        <!-- Skill blocks -->
-        <div class="skills-wrap">
-          <!-- Column -->
-          <div class="skill-block reveal">
-            <h3 class="skill-title">Programming & Backend</h3>
-            <div class="skill-grid">
-              <div class="skill-pill">Python</div>
-              <div class="skill-pill">SQL</div>
-              <div class="skill-pill">FastAPI</div>
-              <div class="skill-pill">REST APIs</div>
-              <div class="skill-pill">ETL (basic)</div>
-              <div class="skill-pill">DSA (exposure)</div>
-            </div>
-          </div>
-
-          <div class="skill-block reveal">
-            <h3 class="skill-title">Database</h3>
-            <div class="skill-grid">
-              <div class="skill-pill">PostgreSQL</div>
-              <div class="skill-pill">MySQL (concepts)</div>
-              <div class="skill-pill">SQLAlchemy</div>
-              <div class="skill-pill">Query Optimization (basic)</div>
-              <div class="skill-pill">Data Validation</div>
-            </div>
-          </div>
-
-          <div class="skill-block reveal">
-            <h3 class="skill-title">Cloud & DevOps</h3>
-            <div class="skill-grid">
-              <div class="skill-pill">AWS (Lambda/S3/RDS)</div>
-              <div class="skill-pill">Docker</div>
-              <div class="skill-pill">Docker Compose</div>
-              <div class="skill-pill">Git / GitHub</div>
-              <div class="skill-pill">CI/CD (exposure)</div>
-            </div>
-          </div>
-
-          <div class="skill-block reveal">
-            <h3 class="skill-title">Analytics & Tools</h3>
-            <div class="skill-grid">
-              <div class="skill-pill">Power BI</div>
-              <div class="skill-pill">Tableau</div>
-              <div class="skill-pill">Excel (Power Query)</div>
-              <div class="skill-pill">Pandas</div>
-              <div class="skill-pill">NumPy</div>
-              <div class="skill-pill">Swagger / OpenAPI</div>
-            </div>
-          </div>
-
-          <div class="skill-block reveal">
-            <h3 class="skill-title">Frontend & UX</h3>
-            <div class="skill-grid">
-              <div class="skill-pill">HTML5</div>
-              <div class="skill-pill">CSS3</div>
-              <div class="skill-pill">JavaScript</div>
-              <div class="skill-pill">Figma (UI/UX)</div>
-              <div class="skill-pill">React (basic)</div>
-            </div>
-          </div>
-
-          <div class="skill-block reveal">
-            <h3 class="skill-title">Security</h3>
-            <div class="skill-grid">
-              <div class="skill-pill">AuthN/AuthZ (concepts)</div>
-              <div class="skill-pill">Secure Data Handling</div>
-              <div class="skill-pill">Compliance Awareness</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-      PROJECTS
-    ========================== -->
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title">Projects</h2>
-          <p class="section-subtitle">
-            Portfolio-grade projects. Replace placeholder links with your GitHub repositories or demos.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card reveal">
-            <div class="project-top">
-              <h3 class="project-title">Expense Management Backend System (EMBS)</h3>
-              <span class="project-tag">Backend</span>
-            </div>
-            <p class="project-text">
-              Built a backend API to create, list, approve, and reject expenses with a clear lifecycle and database persistence.
-            </p>
-            <ul class="project-list">
-              <li>REST endpoints + Swagger docs</li>
-              <li>PostgreSQL + SQLAlchemy model</li>
-              <li>Pytest coverage for core flows</li>
-            </ul>
-            <div class="project-meta">
-              <span class="stack">Python</span>
-              <span class="stack">FastAPI</span>
-              <span class="stack">PostgreSQL</span>
-              <span class="stack">Docker</span>
-            </div>
-            <div class="project-links">
-              <a class="link" href="https://github.com/Amirtha-Varshini-Sugumaran/01-backend-engineering-track-of-EMBS" target="_blank" rel="noopener">GitHub</a>
-              <a class="link" href="#" target="_blank" rel="noopener">Demo</a>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card reveal">
-            <div class="project-top">
-              <h3 class="project-title">AI-Powered Skill Diagnostic Tool (PG Project)</h3>
-              <span class="project-tag">Applied AI + UX</span>
-            </div>
-            <p class="project-text">
-              Contributed to UI/UX and course recommendation integration (Figma → React), plus course matching logic validation.
-            </p>
-            <ul class="project-list">
-              <li>Designed UI layout and interaction flow</li>
-              <li>Integrated regex + fuzzy matching for course suggestions</li>
-              <li>Validated Coursera links and outputs</li>
-            </ul>
-            <div class="project-meta">
-              <span class="stack">Figma</span>
-              <span class="stack">React</span>
-              <span class="stack">Python</span>
-              <span class="stack">Regex</span>
-            </div>
-            <div class="project-links">
-              <a class="link" href="#" target="_blank" rel="noopener">GitHub</a>
-              <a class="link" href="#" target="_blank" rel="noopener">Report</a>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card reveal">
-            <div class="project-top">
-              <h3 class="project-title">Digital Product Passports (DPP) — Consulting + BI</h3>
-              <span class="project-tag">Analytics</span>
-            </div>
-            <p class="project-text">
-              Built dashboards and delivered a client-ready report mapping regulatory obligations to measurable lifecycle KPIs.
-            </p>
-            <ul class="project-list">
-              <li>Power BI dashboards (lifecycle, reliability)</li>
-              <li>Research-backed recommendations</li>
-              <li>Presentation-ready narrative</li>
-            </ul>
-            <div class="project-meta">
-              <span class="stack">Power BI</span>
-              <span class="stack">Research</span>
-              <span class="stack">Reporting</span>
-            </div>
-            <div class="project-links">
-              <a class="link" href="#" target="_blank" rel="noopener">Case Study</a>
-              <a class="link" href="#" target="_blank" rel="noopener">Slides</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-      CONTACT
-    ========================== -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-subtitle">
-            Use the form or reach out via email / LinkedIn. (Form is static on GitHub Pages—use mailto or a form service.)
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card reveal">
-            <h3 class="card-title">Send a message</h3>
-
-            <!-- NOTE: GitHub Pages is static; for real submissions use Formspree / Netlify Forms.
-                 For now, mailto fallback. -->
-            <form class="contact-form" action="mailto:amirthasugumaran1410@gmail.com" method="post" enctype="text/plain">
-              <label class="field">
-                <span>Name</span>
-                <input type="text" name="name" placeholder="Your name" required />
-              </label>
-
-              <label class="field">
-                <span>Email</span>
-                <input type="email" name="email" placeholder="you@email.com" required />
-              </label>
-
-              <label class="field">
-                <span>Message</span>
-                <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
-              </label>
-
-              <button class="btn btn-primary" type="submit">Send</button>
-            </form>
-          </div>
-
-          <div class="contact-card reveal">
-            <h3 class="card-title">Connect</h3>
-            <p class="card-text">
-              Prefer email or LinkedIn. I respond professionally and quickly.
-            </p>
-
-            <div class="socials">
-              <a class="social" href="mailto:amirthasugumaran1410@gmail.com" aria-label="Email">
-                <span class="social-ico" aria-hidden="true">✉</span>
-                <span>Email</span>
-              </a>
-
-              <a class="social" href="https://www.linkedin.com/in/amirtha-varshini-sugumaran" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <span class="social-ico" aria-hidden="true">in</span>
-                <span>LinkedIn</span>
-              </a>
-
-              <a class="social" href="https://github.com/Amirtha-Varshini-Sugumaran" target="_blank" rel="noopener" aria-label="GitHub">
-                <span class="social-ico" aria-hidden="true">⌁</span>
-                <span>GitHub</span>
-              </a>
-            </div>
-
-            <div class="contact-note muted">
-              Tip: Add your CV PDF to <code>assets/</code> and update the “Download Resume” link in the hero.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p class="muted">© <span id="year"></span> Amirtha Varshini Sugumaran. Built with HTML/CSS/JS. Hosted on GitHub Pages.</p>
-        <a class="back-top" href="#top">Back to top ↑</a>
-      </div>
-    </footer>
   </main>
 
+  <!-- ======================================================
+       JS
+  ======================================================= -->
+  <script>
+    // Footer year
+    document.addEventListener("DOMContentLoaded", () => {
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
   <script src="main.js"></script>
+
+  <!-- Theme toggle helper (CSS will handle actual theme in next step) -->
+  <script>
+    (function () {
+      const btn = document.getElementById("themeToggle");
+      const key = "theme";
+      const root = document.documentElement;
+
+      function applyTheme(t) {
+        if (t === "light") root.setAttribute("data-theme", "light");
+        else root.setAttribute("data-theme", "dark");
+      }
+
+      const saved = localStorage.getItem(key) || "dark";
+      applyTheme(saved);
+
+      if (btn) {
+        btn.addEventListener("click", () => {
+          const current = root.getAttribute("data-theme") || "dark";
+          const next = current === "dark" ? "light" : "dark";
+          localStorage.setItem(key, next);
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

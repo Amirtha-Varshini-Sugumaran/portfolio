@@ -1,179 +1,191 @@
-/* main.js
-=========================================================
-  Vanilla JS interactions:
-  1) Typed effect (hero)
-  2) Smooth scroll enhancements (offset for sticky header)
-  3) Active nav state (IntersectionObserver)
-  4) Scroll reveal animations
-  5) Mobile nav toggle + close on link click / outside click
+/* =========================================================
+   Portfolio Main JS (Vanilla)
+   - Mobile nav toggle (optional hook)
+   - Smooth scroll
+   - Scroll spy (active nav + moving indicator)
+   - Typed effect in hero
+   - Scroll reveal animations
 ========================================================= */
 
-(() => {
+(function () {
+  "use strict";
+
   // ---------------------------
   // Helpers
   // ---------------------------
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-  // Update footer year
-  const yearEl = $("#year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
   // ---------------------------
-  // Typed effect (no external libs)
+  // Smooth scroll for in-page links
   // ---------------------------
-  const typedEl = $("#typed");
-  const roles = ["Business Analyst", "Software Engineer", "Data Analyst"];
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function typeTick() {
-    if (!typedEl) return;
-
-    const current = roles[roleIndex];
-    const visibleText = isDeleting
-      ? current.slice(0, charIndex--)
-      : current.slice(0, charIndex++);
-
-    typedEl.textContent = visibleText;
-
-    // Speed controls
-    const base = 70;
-    const typingSpeed = isDeleting ? base * 0.55 : base;
-    const pauseAfterType = 950;
-    const pauseAfterErase = 220;
-
-    // Completed typing a word
-    if (!isDeleting && charIndex > current.length) {
-      isDeleting = true;
-      setTimeout(typeTick, pauseAfterType);
-      return;
-    }
-
-    // Completed erasing
-    if (isDeleting && charIndex < 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      setTimeout(typeTick, pauseAfterErase);
-      return;
-    }
-
-    setTimeout(typeTick, typingSpeed);
-  }
-  typeTick();
-
-  // ---------------------------
-  // Sticky header offset smooth scroll
-  // ---------------------------
-  const header = $(".site-header");
-  const headerOffset = () => (header ? header.getBoundingClientRect().height : 0);
-
-  // Enhance anchor clicks so sections don't hide behind sticky header
-  $$("a[data-nav]").forEach((link) => {
+  const navLinks = $$(".nav-link");
+  navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
       if (!href || !href.startsWith("#")) return;
 
+      e.preventDefault();
       const target = $(href);
       if (!target) return;
 
-      e.preventDefault();
+      const header = $(".site-header");
+      const headerH = header ? header.offsetHeight : 0;
+      const y = target.getBoundingClientRect().top + window.scrollY - headerH + 2;
 
-      const top = target.getBoundingClientRect().top + window.scrollY - headerOffset() + 2;
-      window.scrollTo({ top, behavior: "smooth" });
+      window.scrollTo({ top: y, behavior: "smooth" });
     });
   });
 
   // ---------------------------
-  // Mobile nav toggle
+  // Scroll Spy + Moving Indicator
   // ---------------------------
-  const navToggle = $(".nav-toggle");
-  const nav = $(".site-nav");
+  const headerEl = $(".site-header");
+  const navList = $(".nav-links");
+  let indicator = null;
 
-  function setNavOpen(isOpen) {
-    if (!nav || !navToggle) return;
-    nav.classList.toggle("open", isOpen);
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  function createIndicator() {
+    if (!navList) return;
+    indicator = document.createElement("div");
+    indicator.className = "nav-indicator";
+    navList.style.position = "relative";
+    navList.appendChild(indicator);
   }
 
-  if (navToggle && nav) {
-    navToggle.addEventListener("click", () => {
-      const open = nav.classList.contains("open");
-      setNavOpen(!open);
-    });
-
-    // Close on link click (mobile)
-    $$("a[data-nav]").forEach((a) => {
-      a.addEventListener("click", () => setNavOpen(false));
-    });
-
-    // Close on outside click
-    document.addEventListener("click", (e) => {
-      const isClickInside = nav.contains(e.target) || navToggle.contains(e.target);
-      if (!isClickInside) setNavOpen(false);
-    });
-
-    // Close on ESC
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") setNavOpen(false);
+  function setActiveLink(activeId) {
+    navLinks.forEach((a) => {
+      const href = a.getAttribute("href");
+      const isActive = href === `#${activeId}`;
+      a.classList.toggle("active", isActive);
     });
   }
 
+  function moveIndicatorToActive() {
+    if (!indicator || !navList) return;
+    const active = $(".nav-link.active", navList);
+    if (!active) return;
+
+    const rect = active.getBoundingClientRect();
+    const parentRect = navList.getBoundingClientRect();
+
+    const left = rect.left - parentRect.left;
+    const width = rect.width;
+
+    indicator.style.transform = `translateX(${left}px)`;
+    indicator.style.width = `${width}px`;
+    indicator.style.opacity = "1";
+  }
+
+  function getCurrentSectionId() {
+    const headerH = headerEl ? headerEl.offsetHeight : 0;
+    const sections = $$("section[id]");
+    const y = window.scrollY + headerH + 20;
+
+    // Find last section whose top <= y
+    let current = sections[0]?.id || "";
+    for (const sec of sections) {
+      const top = sec.offsetTop;
+      if (top <= y) current = sec.id;
+    }
+    return current;
+  }
+
+  function onScrollSpy() {
+    const id = getCurrentSectionId();
+    if (!id) return;
+    setActiveLink(id);
+    moveIndicatorToActive();
+  }
+
+  // Create indicator and run once
+  createIndicator();
+  window.addEventListener("resize", () => {
+    moveIndicatorToActive();
+  });
+  window.addEventListener("scroll", () => {
+    onScrollSpy();
+    revealOnScroll(); // keep reveal synced
+  });
+
   // ---------------------------
-  // Scroll reveal animations
+  // Typed effect (Hero)
+  // ---------------------------
+  const typedEl = $("#typed-role");
+  const roles = ["Software Engineer", "Business Analyst", "Data Analyst"];
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeLoop() {
+    if (!typedEl) return;
+
+    const current = roles[roleIndex];
+    const speedType = 70;
+    const speedDelete = 45;
+    const pauseFull = 950;
+    const pauseEmpty = 250;
+
+    if (!deleting) {
+      charIndex++;
+      typedEl.textContent = current.slice(0, charIndex);
+      if (charIndex >= current.length) {
+        deleting = true;
+        setTimeout(typeLoop, pauseFull);
+        return;
+      }
+      setTimeout(typeLoop, speedType);
+    } else {
+      charIndex--;
+      typedEl.textContent = current.slice(0, Math.max(0, charIndex));
+      if (charIndex <= 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeLoop, pauseEmpty);
+        return;
+      }
+      setTimeout(typeLoop, speedDelete);
+    }
+  }
+  typeLoop();
+
+  // ---------------------------
+  // Scroll Reveal (IntersectionObserver first; fallback to manual)
   // ---------------------------
   const revealEls = $$(".reveal");
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
 
-  revealEls.forEach((el) => revealObserver.observe(el));
-
-  // ---------------------------
-  // Active nav state
-  // ---------------------------
-  const sections = ["#hero", "#about", "#services", "#skills", "#projects", "#contact"]
-    .map((id) => $(id))
-    .filter(Boolean);
-
-  const navLinks = $$("a[data-nav]");
-  const linkByHash = new Map(navLinks.map((a) => [a.getAttribute("href"), a]));
-
-  function setActive(hash) {
-    navLinks.forEach((a) => a.classList.remove("active"));
-    const active = linkByHash.get(hash);
-    if (active) active.classList.add("active");
+  function revealNow(el) {
+    el.classList.add("in-view");
   }
 
-  // IntersectionObserver for sections
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      // pick the most visible section
-      const visible = entries
-        .filter((e) => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  function revealOnScroll() {
+    // Fallback if no IntersectionObserver
+    const threshold = 0.18;
+    const vh = window.innerHeight;
 
-      if (visible) setActive(`#${visible.target.id}`);
-    },
-    {
-      // offset approximate header height
-      rootMargin: `-${Math.round(headerOffset())}px 0px -65% 0px`,
-      threshold: [0.12, 0.25, 0.4, 0.6],
-    }
-  );
+    revealEls.forEach((el) => {
+      if (el.classList.contains("in-view")) return;
+      const rect = el.getBoundingClientRect();
+      const visible = rect.top < vh * (1 - threshold);
+      if (visible) revealNow(el);
+    });
+  }
 
-  sections.forEach((sec) => sectionObserver.observe(sec));
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) revealNow(entry.target);
+        });
+      },
+      { threshold: 0.12 }
+    );
 
-  // Default active
-  setActive("#hero");
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealOnScroll();
+  }
+
+  // Initial activation
+  onScrollSpy();
+  moveIndicatorToActive();
 })();
