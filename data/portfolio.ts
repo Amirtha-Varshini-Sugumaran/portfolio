@@ -21,9 +21,9 @@ export const profile = {
   github: "https://github.com/Amirtha-Varshini-Sugumaran",
   cv: "/Amirtha-Varshini-Sugumaran-CV.pdf",
   headline:
-    "Software Engineer | Backend Systems | Data & Business Analysis",
+    "Software Engineer | Business Analyst | Data Analyst",
   shortRole:
-    "Software Engineer | Backend Systems | Data & Business Analysis"
+    "Software Engineer | Business Analyst | Data Analyst"
 };
 
 export const navLinks = [
