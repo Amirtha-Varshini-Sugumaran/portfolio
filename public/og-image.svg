@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#22223b"/>
+  <rect x="70" y="70" width="1060" height="490" rx="8" fill="#f2e9e4"/>
+  <rect x="110" y="110" width="980" height="410" rx="8" fill="#ffffff"/>
+  <text x="150" y="220" fill="#22223b" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Amirtha Varshini Sugumaran</text>
+  <text x="150" y="295" fill="#4a4e69" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Java Junior Software Engineer</text>
+  <text x="150" y="355" fill="#4a4e69" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Backend Systems • APIs • PostgreSQL • Full Stack Exposure</text>
+  <rect x="150" y="420" width="220" height="54" rx="8" fill="#22223b"/>
+  <text x="180" y="455" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">Dublin, Ireland</text>
+  <rect x="390" y="420" width="250" height="54" rx="8" fill="#c9ada7"/>
+  <text x="420" y="455" fill="#22223b" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">Backend Portfolio</text>
+</svg>

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --primary: #22223b;
+  --secondary: #4a4e69;
+  --accent: #9a8c98;
+  --warm: #c9ada7;
+  --background: #f2e9e4;
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-dark);
+  font-family: Inter, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--warm);
+  color: var(--primary);
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
