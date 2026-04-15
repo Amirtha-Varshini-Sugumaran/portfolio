@@ -1,6 +1,6 @@
 # Amirtha Varshini Sugumaran Portfolio
 
-A modern, recruiter-focused personal portfolio for **Amirtha Varshini Sugumaran**, positioned for Java Junior Software Engineer, Backend Developer, Graduate Software Engineer, Full Stack Engineer, Technical Analyst and Business Systems Analyst opportunities in Ireland.
+A modern, recruiter-focused personal portfolio for **Amirtha Varshini Sugumaran**, positioned for Software Engineer, Backend Developer, Data Analyst, Business Analyst, Technical Analyst and Business Systems Analyst opportunities in Ireland.
 
 The site is built as a polished single-page Next.js portfolio with structured content, reusable components, responsive layouts, subtle Framer Motion animation and deployment-ready metadata.
 
@@ -15,7 +15,7 @@ The site is built as a polished single-page Next.js portfolio with structured co
 
 ## Portfolio Focus
 
-- Java-oriented junior software engineering positioning
+- Software engineering and backend systems positioning
 - Backend systems, REST APIs and relational database workflows
 - PostgreSQL schema design, query optimisation and RBAC exposure
 - Frontend integration and full-stack collaboration

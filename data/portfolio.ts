@@ -14,16 +14,16 @@ import {
 
 export const profile = {
   name: "Amirtha Varshini Sugumaran",
-  location: "Dublin 15, Ireland",
+  location: "Dublin, Ireland",
   email: "amirthasugumaran1410@gmail.com",
   phone: "+353 0894183110",
   linkedin: "https://www.linkedin.com/in/amirtha-varshini-sugumaran/",
   github: "https://github.com/Amirtha-Varshini-Sugumaran",
   cv: "/Amirtha-Varshini-Sugumaran-CV.pdf",
   headline:
-    "Java Junior Software Engineer | Backend Systems | APIs | Databases | Full Stack Exposure",
+    "Software Engineer | Backend Systems | Data & Business Analysis",
   shortRole:
-    "Java-oriented backend developer with full-stack collaboration and business analytics depth."
+    "Software Engineer | Backend Systems | Data & Business Analysis"
 };
 
 export const navLinks = [
@@ -37,9 +37,9 @@ export const navLinks = [
 ];
 
 export const highlights = [
-  "Backend-first software engineer with API, database, authentication, debugging and release support experience.",
-  "Java-oriented career focus supported by practical backend delivery, frontend integration and enterprise workflow exposure.",
-  "Business Analytics graduate able to translate requirements, data signals and stakeholder needs into structured technical work."
+  "Backend systems experience across REST APIs, PostgreSQL, authentication, debugging and deployment support.",
+  "Strong data and business analysis foundation with SQL-driven reporting, KPI tracking and process mapping.",
+  "Able to translate business requirements into structured technical solutions within Agile delivery environments."
 ];
 
 export const experience = [
@@ -47,57 +47,55 @@ export const experience = [
     company: "VNS RCM Technologies Pvt Ltd",
     role: "Junior Software Engineer",
     location: "Chennai, India",
-    dates: "December 2023 - September 2024",
+    dates: "Dec 2023 - Sep 2024",
     icon: Code2,
     summary:
-      "Junior Software Engineer working across backend services, frontend-integrated modules, database workflows, enterprise API integrations and secure application functionality in an Agile environment. The role strengthened my Java-stack orientation, backend engineering discipline, full-stack collaboration and SDLC execution.",
+      "Worked across backend systems, data workflows and frontend-integrated modules within Agile teams, contributing to application development, reporting systems and enterprise process automation.",
     bullets: [
-      "Designed and developed 20+ production-grade REST API endpoints supporting internal business workflows and enterprise application modules.",
-      "Contributed to backend service development with focus on structured application logic, API reliability, maintainable architecture and scalable module design.",
-      "Architected and optimised PostgreSQL schemas across 5+ business modules, improving relational consistency, tenant-aware access patterns and query performance.",
-      "Implemented secure authentication and RBAC flows using hierarchical access logic for enterprise-grade multi-tenant applications.",
-      "Integrated enterprise APIs and workflow systems to automate document and operational processes, reducing manual intervention across recurring tasks.",
-      "Supported frontend-connected application modules by aligning API contracts, data exchange patterns and user-facing reliability requirements.",
-      "Contributed to proof-of-concept web and mobile features aligned with internal platform requirements, strengthening practical full-stack exposure.",
-      "Participated in debugging, validation, testing and release-readiness checks to improve system stability and delivery confidence.",
-      "Containerized services with Docker to reduce environment setup friction and improve consistency across development workflows.",
-      "Collaborated with developers, QA, business users and stakeholders in Agile sprints using Jira and Git-based version control.",
-      "Used AI-assisted engineering tools including Codex and Claude Code for scaffolding, debugging support and delivery acceleration while retaining engineering ownership."
+      "Designed and developed 20+ REST API endpoints supporting internal business applications and workflows.",
+      "Built and optimised PostgreSQL schemas across multiple modules, improving data consistency and reporting accuracy.",
+      "Implemented authentication and RBAC for secure, multi-tenant system environments.",
+      "Integrated backend APIs with frontend and mobile modules, enabling real-time data flow and user-facing functionality.",
+      "Supported frontend-connected features, ensuring accurate API responses and smooth system behaviour.",
+      "Automated enterprise workflows through API integrations, reducing manual processing effort.",
+      "Debugged system issues and validated application logic to improve reliability and performance.",
+      "Containerised services using Docker to standardise development environments.",
+      "Collaborated with cross-functional teams using Git and Jira within Agile delivery cycles.",
+      "Leveraged AI-assisted tools to improve development efficiency and debugging speed."
     ],
-    clusters: [
-      {
-        title: "Multi-Tenant Workflow Management System",
-        description:
-          "Contributed backend APIs, tenant-aware database workflows, secure access logic and frontend integration support for an internal enterprise workflow platform."
-      },
-      {
-        title: "Enterprise Document Automation System",
-        description:
-          "Built and supported API-driven automation flows for document handling, operational processing and business rule execution across internal teams."
-      },
-      {
-        title: "Internal Platform and Mobile Module Development",
-        description:
-          "Supported web and mobile-facing modules through API contract alignment, UI module collaboration, debugging and release-readiness validation."
-      }
-    ],
-    tags: ["Java-oriented backend", "REST APIs", "PostgreSQL", "RBAC", "Docker", "Agile"]
+    tags: ["Backend Development", "API Design", "Database Systems", "Frontend Integration", "Debugging", "Deployment Support"]
   },
   {
     company: "VNS RCM Technologies Pvt Ltd",
     role: "Business Systems & Data Analyst Intern",
     location: "Chennai, India",
-    dates: "June 2023 - December 2023",
+    dates: "Jun 2023 - Dec 2023",
     icon: Workflow,
     summary:
-      "Built a software-engineering foundation through requirements analysis, SQL validation, reporting automation, structured documentation and stakeholder-facing delivery.",
+      "Worked at the intersection of business and data, translating requirements into structured outputs, improving reporting accuracy and enabling data-driven decision-making.",
     bullets: [
-      "Translated business requirements into clear functional tasks, acceptance notes and implementation-ready documentation.",
-      "Used SQL validation and reporting analysis to verify data quality, workflow accuracy and operational performance patterns.",
-      "Mapped process gaps, documented BRD/FRD inputs and supported developers with business context for cleaner implementation decisions.",
-      "Improved stakeholder communication, requirement clarity and data-backed thinking that now supports backend and systems engineering work."
+      "Conducted stakeholder discussions to gather functional and non-functional requirements.",
+      "Created structured documentation including BRDs, FRDs and workflow diagrams.",
+      "Mapped business processes to identify inefficiencies and automation opportunities.",
+      "Translated business requirements into actionable technical tasks for development teams.",
+      "Supported UAT validation by aligning implemented features with documented requirements.",
+      "Maintained traceability between requirements, development tasks and final outputs.",
+      "Developed complex SQL queries using joins, aggregations and subqueries to extract reporting datasets.",
+      "Performed data validation and consistency checks across multiple datasets.",
+      "Analysed large datasets to identify discrepancies, trends and performance gaps.",
+      "Automated recurring KPI reports using Python and Excel-based workflows.",
+      "Improved reporting accuracy by cleaning and structuring raw data inputs.",
+      "Built Excel-based dashboards and templates for operational performance tracking.",
+      "Presented analytical findings to stakeholders to support decision-making."
     ],
-    tags: ["Requirements", "SQL validation", "Reporting automation", "BRD / FRD", "Stakeholders"]
+    clusters: [
+      {
+        title: "Key Impact",
+        description:
+          "Improved reporting accuracy, reduced manual reporting effort and enhanced alignment between business requirements and system outputs."
+      }
+    ],
+    tags: ["Business Analysis", "SQL Reporting", "KPI Automation", "BRD / FRD", "UAT Support", "Stakeholders"]
   },
   {
     company: "Maynooth University",
@@ -106,7 +104,7 @@ export const experience = [
     dates: "2025",
     icon: ShieldCheck,
     summary:
-      "Supported examination delivery with reliability, confidentiality, process compliance and calm accountability in a structured academic environment.",
+      "Maintained examination integrity through strict adherence to procedures, demonstrating accountability and compliance discipline.",
     bullets: [
       "Maintained examination procedures, candidate support and room-level compliance under time-sensitive conditions.",
       "Demonstrated professional reliability, attention to detail and clear communication in a trust-based role."
@@ -118,108 +116,101 @@ export const experience = [
 export const projects = [
   {
     title: "Expense Management Backend System (EMBS)",
-    label: "Flagship backend engineering project",
+    label: "Backend Engineering Project",
     problem:
-      "Internal expense processes need reliable validation, auditable approval workflows and maintainable backend services.",
+      "Employee expense workflows require structured approval logic, validation and audit tracking.",
     description:
-      "A backend-focused system built with layered architecture, approval and rejection flows, business-rule validation, auditability, health monitoring and API documentation.",
+      "Designed a backend system to manage employee expense workflows with structured approval logic, audit tracking, layered architecture and reliable validation.",
     impact:
-      "Demonstrates production-minded backend engineering discipline across API design, persistence, testing and deployment consistency.",
-    stack: ["FastAPI", "PostgreSQL", "Docker Compose", "SQLAlchemy", "Pydantic", "Pytest", "OpenAPI"],
+      "Developed REST APIs for expense submission, approval and rejection workflows while separating API, logic and database layers for maintainability.",
+    stack: ["Python", "FastAPI", "PostgreSQL", "Docker"],
     links: { github: "#", demo: "#" }
   },
   {
     title: "Mortgage Calculator",
-    label: "Java fundamentals project",
+    label: "Java Project",
     problem:
-      "Mortgage calculations require accurate financial logic, safe input handling and clear repayment output.",
+      "Mortgage calculations require accurate financial formulas, user input handling and formatted outputs.",
     description:
-      "A Java command-line application focused on financial calculation logic, mathematical modelling, user input handling and formatted output.",
+      "Developed a command-line mortgage calculator demonstrating core Java fundamentals, structured programming and practical problem-solving ability.",
     impact:
-      "Highlights Java problem-solving fundamentals, clean control flow and confidence with engineering basics in a finance-oriented use case.",
-    stack: ["Java", "CLI", "Financial logic", "Input handling", "Formatted output"],
+      "Implemented financial calculations using mathematical formulas, clean code practices and real-world output formatting.",
+    stack: ["Java"],
     links: { github: "#", demo: "#" }
   },
   {
     title: "AI-Powered Skill Diagnostic Tool",
     label: "Recommendation logic and frontend integration",
     problem:
-      "Learners need structured feedback that converts raw skill input into useful gap analysis and next-step recommendations.",
+      "Learners need structured feedback that identifies skill gaps and recommends learning paths.",
     description:
-      "A rule-driven diagnostic tool using regex, fuzzy matching and recommendation logic with a React-based frontend integration layer.",
+      "Built a system to analyse user skills and recommend learning paths using structured backend logic, regex, fuzzy matching and frontend integration.",
     impact:
-      "Shows structured system design, practical parsing logic and the ability to connect analytical rules to a usable application interface.",
-    stack: ["Python", "Regex", "Fuzzy matching", "React", "Recommendation logic"],
+      "Delivered rule-driven outputs for consistent recommendations and clearer skill-gap analysis.",
+    stack: ["Python", "React"],
     links: { github: "#", demo: "#" }
   },
   {
-    title: "Netflix Streaming Audience Segmentation",
+    title: "Netflix Audience Segmentation",
     label: "Analytics and dashboarding project",
     problem:
-      "Streaming audience data needs segmentation and visual insight to support content and customer strategy decisions.",
+      "Streaming behaviour data needs segmentation to reveal engagement patterns and business insights.",
     description:
-      "A business analytics project combining segmentation, regression analysis and dashboarding to communicate audience behaviour patterns.",
+      "Analysed user viewing behaviour, subscription patterns and engagement metrics to generate dashboard-led insights.",
     impact:
-      "Demonstrates analytical thinking, business insight generation and clear communication through executive-ready reporting.",
-    stack: ["Excel", "Power BI", "Regression analysis", "Segmentation", "Dashboards"],
+      "Cleaned and transformed data using Excel tools and built Power BI dashboards to visualise trends and performance metrics.",
+    stack: ["Excel", "Power BI"],
     links: { github: "#", demo: "#" }
   },
   {
-    title: "Digital Product Passports (DPP)",
+    title: "Digital Product Passport (DPP) - Consulting Project",
     label: "Business consulting project",
     problem:
-      "Organisations need to understand EU Digital Product Passport requirements and turn regulation into practical readiness plans.",
+      "Organisations need analytical insight to prepare for EU product lifecycle and sustainability compliance.",
     description:
-      "A consulting-style analytics project covering EU regulatory analysis, sustainability strategy, Power BI dashboards and executive presentation.",
+      "Developed analytical insights and dashboards to support regulatory compliance strategy, sustainability reporting and executive recommendations.",
     impact:
-      "Connects analytical research, regulatory interpretation and business-facing communication for strategy and delivery planning.",
-    stack: ["EU regulation", "Power BI", "Sustainability", "Consulting", "Executive presentation"],
+      "Analysed EU regulations and built dashboards highlighting emissions, repair rates and performance metrics.",
+    stack: ["Power BI", "Analytics"],
     links: { github: "#", demo: "#" }
   },
-  {
-    title: "Decision Support System for Retail Location Selection",
-    label: "Structured business decisioning",
-    problem:
-      "Retail location choices require consistent scoring across demand, competition, cost and accessibility factors.",
-    description:
-      "A decision-support project translating business criteria into structured evaluation logic and stakeholder-ready recommendations.",
-    impact:
-      "Shows functional decomposition, data-informed decisioning and business systems thinking.",
-    stack: ["Decision support", "Excel", "Scoring model", "Business analysis"],
-    links: { github: "#", demo: "#" }
-  }
 ];
 
 export const skillGroups = [
   {
     title: "Programming & Engineering",
     icon: Code2,
-    skills: ["Java", "Python", "SQL", "REST APIs", "Backend Development", "Frontend Integration"]
+    skills: ["Java", "Python", "SQL", "REST APIs", "Backend Development"]
   },
   {
-    title: "Backend & Data",
+    title: "Databases & Data",
     icon: Database,
-    skills: ["PostgreSQL", "Relational Database Design", "Query Optimisation", "Database Workflows", "API Design"]
+    skills: ["PostgreSQL", "Relational Database Design", "Query Optimisation", "Data Modelling"]
   },
   {
     title: "Frontend & Application Layer",
     icon: BriefcaseBusiness,
-    skills: ["HTML", "CSS", "JavaScript", "Flutter", "UI Module Integration"]
+    skills: ["HTML", "CSS", "JavaScript", "Flutter", "API Integration"]
   },
   {
     title: "Engineering Practices",
     icon: ShieldCheck,
-    skills: ["Git", "GitHub", "Docker", "SDLC", "Agile", "Jira", "Debugging", "Testing", "Authentication", "Authorisation", "RBAC"]
+    skills: ["Git", "GitHub", "Docker", "Agile (Scrum)", "SDLC", "Jira", "Debugging", "Testing"]
+  },
+  {
+    title: "Security",
+    icon: ShieldCheck,
+    skills: ["Authentication", "Authorisation", "Role-Based Access Control (RBAC)"]
   },
   {
     title: "Analytics & BI",
     icon: LineChart,
-    skills: ["Power BI", "Tableau", "Advanced Excel", "KPI Reporting", "Data Modelling"]
+    skills: ["Power BI", "Tableau", "Advanced Excel", "KPI Reporting", "Data Analysis"]
   },
   {
-    title: "Business & Systems",
+    title: "Business Analysis",
     icon: Workflow,
-    skills: ["Requirement Gathering", "BRD / FRD", "Process Mapping", "Stakeholder Communication", "Functional Decomposition"]
+    skills: ["Requirement Gathering", "BRD/FRD", "Process Mapping", "Stakeholder Communication", "UAT Support"]
   }
 ];
 
@@ -227,27 +218,25 @@ export const education = [
   {
     degree: "MSc Business Analytics",
     institution: "Maynooth University, Ireland",
-    dates: "September 2024 - September 2025",
+    dates: "Sep 2024 - Sep 2025",
     result: "Second Class Honours (2.1)",
     focus: [
       "Predictive analytics",
       "Data modelling",
-      "Research methodologies",
-      "Dashboard design",
-      "Translating analytics into strategy"
+      "Research methods",
+      "Business insights"
     ]
   },
   {
-    degree: "BCom with Business Analytics",
-    institution: "Sri Krishna College of Arts and Science, Coimbatore",
-    dates: "July 2021 - April 2024",
+    degree: "BCom Business Analytics",
+    institution: "Sri Krishna College of Arts and Science, India",
+    dates: "Jul 2021 - Apr 2024",
     result: "First Class with Distinction (1.1)",
     focus: [
       "SQL and relational understanding",
       "Statistical analysis",
-      "Data cleaning",
-      "Exploratory analysis",
-      "Finance and optimisation foundations"
+      "Data processing",
+      "Financial modelling"
     ]
   }
 ];
@@ -255,8 +244,8 @@ export const education = [
 export const certifications = [
   "Machine Learning Master Certification - Altair RapidMiner (2025)",
   "Business Analysis A to Z - Udemy (2024)",
-  "What Is Business Analysis? - LinkedIn Learning (2023)",
-  "Digital Marketing Analytics in Theory - Coursera (2024)",
+  "What Is Business Analysis - LinkedIn Learning (2023)",
+  "Digital Marketing Analytics - Coursera (2024)",
   "Legal Aspects of Entrepreneurship - Coursera (2022)",
   "Attention to Detail - TestDome (2025)"
 ];
@@ -269,10 +258,10 @@ export const contactItems = [
 ];
 
 export const outcomes = [
-  { value: "20+", label: "REST API endpoints delivered" },
-  { value: "5+", label: "business modules supported" },
+  { value: "20+", label: "REST API endpoints built" },
+  { value: "SQL", label: "reporting and validation strength" },
   { value: "2.1", label: "MSc Business Analytics" },
-  { value: "Java", label: "primary engineering target" }
+  { value: "Agile", label: "delivery environment" }
 ];
 
 export const certificationIcon = Award;

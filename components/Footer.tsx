@@ -8,7 +8,7 @@ export function Footer() {
           <h2 className="text-xl font-bold">{profile.name}</h2>
           <p className="mt-2 text-sm text-white/70">{profile.shortRole}</p>
           <p className="mt-3 text-xs text-white/60">
-            Copyright {new Date().getFullYear()} {profile.name}. All rights reserved.
+            © 2026 All Rights Reserved.
           </p>
         </div>
         <div className="flex flex-wrap gap-4 text-sm">

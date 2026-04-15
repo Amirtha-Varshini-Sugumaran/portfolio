@@ -4,14 +4,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://amirtha-varshini-sugumaran.github.io/portfolio"),
-  title: "Amirtha Varshini Sugumaran | Java Junior Software Engineer Portfolio",
+  title: "Amirtha Varshini Sugumaran | Software Engineer Portfolio",
   description:
-    "Recruiter-focused portfolio for Amirtha Varshini Sugumaran, a Dublin-based Java-oriented Junior Software Engineer and backend developer with API, PostgreSQL, full-stack exposure and business analytics experience.",
+    "Recruiter-focused portfolio for Amirtha Varshini Sugumaran, a Dublin-based Software Engineer with backend systems, PostgreSQL, API development, data analysis and business analysis experience.",
   keywords: [
-    "Java Junior Software Engineer",
+    "Software Engineer",
     "Backend Developer",
     "Software Engineer Portfolio",
-    "Full Stack Developer",
+    "Backend Systems",
     "APIs",
     "PostgreSQL",
     "Dublin Ireland",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Amirtha Varshini Sugumaran" }],
   creator: "Amirtha Varshini Sugumaran",
   openGraph: {
-    title: "Amirtha Varshini Sugumaran | Java Junior Software Engineer",
+    title: "Amirtha Varshini Sugumaran | Software Engineer",
     description:
-      "Backend-focused, Java-oriented software engineer portfolio covering APIs, databases, full-stack collaboration and business analytics delivery.",
+      "Software engineer portfolio covering backend systems, APIs, databases, data analysis and business analytics delivery.",
     url: "https://portfolio.vercel.app",
     siteName: "Amirtha Varshini Sugumaran Portfolio",
     images: [
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amirtha Varshini Sugumaran | Java Junior Software Engineer",
+    title: "Amirtha Varshini Sugumaran | Software Engineer",
     description:
-      "Backend systems, APIs, databases, full-stack exposure and analytics-backed delivery in Dublin, Ireland.",
+      "Backend systems, APIs, databases, data analysis and business-backed delivery in Dublin, Ireland.",
     images: ["/og-image.svg"]
   },
   icons: {

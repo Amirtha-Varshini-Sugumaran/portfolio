@@ -8,8 +8,8 @@ export function Skills() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Skills"
-          title="A balanced engineering toolkit for backend, full-stack and systems roles."
-          description="Java is intentionally prominent, supported by backend, database, frontend integration, engineering practice and analytics capability."
+          title="Technical and analytical skills for engineering and analyst roles."
+          description="A focused toolkit across programming, databases, frontend integration, engineering practices, security, analytics and business analysis."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {skillGroups.map((group) => {

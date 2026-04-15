@@ -10,8 +10,8 @@ export function Certifications() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Certifications"
-          title="Continuous learning across analytics, business analysis and precision."
-          description="Compact credentials that reinforce technical curiosity, business analysis grounding and detail-focused execution."
+          title="Certifications across analytics, business analysis and precision."
+          description="Additional learning that supports data analysis, business understanding and detail-focused delivery."
         />
         <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {certifications.map((certification) => (

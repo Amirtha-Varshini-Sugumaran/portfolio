@@ -10,8 +10,8 @@ export function Education() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Education"
-          title="Business analytics education applied to technical delivery."
-          description="Academic work strengthened modelling, analysis, research and communication skills that support engineering decisions."
+          title="Business analytics education supporting technical problem solving."
+          description="Academic work strengthened predictive analytics, data modelling, research methods and business insight generation."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {education.map((item) => (

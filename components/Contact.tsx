@@ -10,8 +10,8 @@ export function Contact() {
         <div>
           <SectionHeading
             eyebrow="Contact"
-            title="Open to Java, backend, full-stack graduate and technical analyst roles."
-            description="Recruiters and hiring teams can reach out for software engineering opportunities in Ireland, especially roles involving backend services, APIs, databases, Java-oriented development and business-facing delivery."
+            title="Let's connect."
+            description="Open to opportunities in Software Engineering, Backend Development, and Data/Business Analysis roles."
           />
           <div className="mt-8 grid gap-4">
             {contactItems.map((item) => {
@@ -49,7 +49,7 @@ export function Contact() {
           </div>
           <label className="mt-5 block">
             <span className="text-sm font-semibold text-text-dark">Role or opportunity</span>
-            <input className="mt-2 w-full rounded-lg border border-primary/10 bg-background/50 px-4 py-3 text-sm outline-none transition focus:border-primary" placeholder="Java Junior Software Engineer" />
+            <input className="mt-2 w-full rounded-lg border border-primary/10 bg-background/50 px-4 py-3 text-sm outline-none transition focus:border-primary" placeholder="Software Engineer or Analyst role" />
           </label>
           <label className="mt-5 block">
             <span className="text-sm font-semibold text-text-dark">Message</span>
@@ -62,9 +62,6 @@ export function Contact() {
             <Send size={17} />
             Send Email
           </a>
-          <p className="mt-4 text-sm leading-6 text-secondary">
-            The form is a recruiter-friendly contact UI. The send action opens an email to Amirtha for dependable delivery.
-          </p>
         </form>
       </div>
     </AnimatedSection>

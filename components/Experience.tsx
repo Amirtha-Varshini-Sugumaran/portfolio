@@ -8,8 +8,8 @@ export function Experience() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Experience"
-          title="Software delivery experience across backend systems, APIs and business workflows."
-          description="A practical engineering path shaped by backend implementation, frontend-integrated modules, database workflows and business-facing delivery."
+          title="Backend systems, data workflows and business-facing delivery."
+          description="Experience across software engineering, reporting systems, requirement analysis and enterprise process automation."
         />
         <div className="mt-12 space-y-7">
           {experience.map((item) => {

@@ -24,7 +24,7 @@ export function Hero() {
             {profile.headline}
           </p>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
-            Backend-focused engineer combining Java-oriented application thinking, API and database delivery, frontend integration exposure and business analytics judgement to build reliable software for real operational workflows.
+            Building scalable backend systems and data-driven solutions by combining software engineering with structured analysis and business understanding.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -44,13 +44,13 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-warm/45 px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
             >
               <Download size={17} />
-              Download CV
+              Resume
             </a>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-white/75">
             <span className="inline-flex items-center gap-2">
               <MapPin size={17} className="text-warm" />
-              {profile.location}
+              {profile.location} | Open to Software Engineering and Analyst roles
             </span>
             <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 transition hover:text-warm">
               <Mail size={17} className="text-warm" />
