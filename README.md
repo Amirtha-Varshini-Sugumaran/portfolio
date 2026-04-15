@@ -81,16 +81,23 @@ npm run lint     # Run Next.js linting
 
 ## Deployment
 
-The project is ready for Vercel deployment.
+The project is ready for Vercel deployment and also includes a GitHub Pages workflow.
 
-1. Push the repository to GitHub.
-2. Import the `portfolio` repository in Vercel.
-3. Keep the default Next.js build settings.
-4. Deploy.
+For GitHub Pages:
+
+1. Push to `main`.
+2. GitHub Actions builds the static export.
+3. The site is published at `https://amirtha-varshini-sugumaran.github.io/portfolio/`.
+
+For Vercel:
+
+1. Import the `portfolio` repository in Vercel.
+2. Keep the default Next.js build settings.
+3. Deploy.
 
 ## Customization Notes
 
 - Update portfolio content in `data/portfolio.ts`.
 - Replace `public/Amirtha-Varshini-Sugumaran-CV.pdf` with the final resume PDF.
 - Replace placeholder project links (`#`) with live GitHub repositories or deployed demos when available.
-- Update `metadataBase` in `app/layout.tsx` after the final Vercel domain is available.
+- Update `metadataBase` in `app/layout.tsx` if you later switch from GitHub Pages to a custom Vercel domain.

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio.vercel.app"),
+  metadataBase: new URL("https://amirtha-varshini-sugumaran.github.io/portfolio"),
   title: "Amirtha Varshini Sugumaran | Java Junior Software Engineer Portfolio",
   description:
     "Recruiter-focused portfolio for Amirtha Varshini Sugumaran, a Dublin-based Java-oriented Junior Software Engineer and backend developer with API, PostgreSQL, full-stack exposure and business analytics experience.",
