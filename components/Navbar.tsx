@@ -9,7 +9,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-primary/96 text-text-light backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-primary text-text-light shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
         <a href="#home" className="text-sm font-bold uppercase">
           AVS
@@ -54,7 +54,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10 hover:text-warm"
+                className="rounded-lg px-3 py-3 text-sm font-medium text-white/90 transition hover:bg-white/10 hover:text-warm"
               >
                 {link.label}
               </a>

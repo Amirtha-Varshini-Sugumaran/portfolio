@@ -85,7 +85,7 @@ export function Hero() {
           className="relative"
         >
           <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.25)] backdrop-blur">
-            <div className="rounded-lg border border-white/10 bg-[#1a1a2e] p-5 font-mono text-sm text-white/85">
+            <div className="rounded-lg border border-white/10 bg-[#1a1a2e] p-5 font-mono text-sm text-white/90">
               <div className="mb-5 flex gap-2">
                 <span className="h-3 w-3 rounded-full bg-warm" />
                 <span className="h-3 w-3 rounded-full bg-accent" />
@@ -105,7 +105,7 @@ export function Hero() {
               {outcomes.map((item) => (
                 <div key={item.label} className="rounded-lg border border-white/10 bg-white/10 p-4">
                   <p className="text-2xl font-extrabold text-white">{item.value}</p>
-                  <p className="mt-1 text-xs leading-5 text-white/65">{item.label}</p>
+                  <p className="mt-1 text-xs leading-5 text-white/60">{item.label}</p>
                 </div>
               ))}
             </div>
