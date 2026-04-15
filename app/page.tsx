@@ -8,6 +8,7 @@ import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
+import { ValueStrip } from "@/components/ValueStrip";
 
 export default function Home() {
   return (
@@ -15,10 +16,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
+        <ValueStrip />
         <Experience />
         <Projects />
         <Skills />
+        <About />
         <Education />
         <Certifications />
         <Contact />

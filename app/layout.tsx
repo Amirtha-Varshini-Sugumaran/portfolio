@@ -6,17 +6,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://amirtha-varshini-sugumaran.github.io/portfolio"),
   title: "Amirtha Varshini Sugumaran | Software Engineer Portfolio",
   description:
-    "Recruiter-focused portfolio for Amirtha Varshini Sugumaran, a Dublin-based Software Engineer with backend systems, PostgreSQL, API development, data analysis and business analysis experience.",
+    "Premium portfolio for Amirtha Varshini Sugumaran, a Dublin-based Software Engineer, Business Analyst, and Data Analyst with backend systems, REST APIs, PostgreSQL, SQL, Power BI, and business analysis experience.",
   keywords: [
     "Software Engineer",
     "Backend Developer",
+    "Business Analyst",
+    "Data Analyst",
     "Software Engineer Portfolio",
     "Backend Systems",
     "APIs",
     "PostgreSQL",
     "Dublin Ireland",
     "Graduate Software Engineer",
-    "Business Analytics Graduate",
     "Technical Analyst"
   ],
   authors: [{ name: "Amirtha Varshini Sugumaran" }],
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Amirtha Varshini Sugumaran | Software Engineer",
     description:
-      "Software engineer portfolio covering backend systems, APIs, databases, data analysis and business analytics delivery.",
-    url: "https://portfolio.vercel.app",
+      "Software engineer portfolio covering backend systems, REST APIs, PostgreSQL, SQL, Power BI, business analysis, and data analysis.",
+    url: "https://amirtha-varshini-sugumaran.github.io/portfolio",
     siteName: "Amirtha Varshini Sugumaran Portfolio",
     images: [
       {
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Amirtha Varshini Sugumaran | Software Engineer",
     description:
-      "Backend systems, APIs, databases, data analysis and business-backed delivery in Dublin, Ireland.",
+      "Backend systems, REST APIs, databases, business analysis, and data analysis in Dublin, Ireland.",
     images: ["/og-image.svg"]
   },
   icons: {

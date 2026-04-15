@@ -1,17 +1,17 @@
 "use client";
 
-import { Download, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { navLinks, profile } from "@/data/portfolio";
+import { navLinks } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-primary text-text-light shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-gunmetal bg-onyx/95 text-whiteish backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
-        <a href="#home" className="text-sm font-bold uppercase">
+        <a href="#home" className="text-sm font-bold uppercase text-whiteish">
           AVS
         </a>
         <div className="hidden items-center gap-7 lg:flex">
@@ -19,31 +19,27 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/80 transition hover:text-warm"
+              className="text-sm font-medium text-cloud transition hover:text-whiteish"
             >
               {link.label}
             </a>
           ))}
-          <a
-            href={profile.cv}
-            className="inline-flex items-center gap-2 rounded-lg border border-warm/40 px-4 py-2 text-sm font-semibold text-white transition hover:border-warm hover:bg-white/10"
-          >
-            <Download size={16} />
-            Resume
+          <a href="#contact" className="rounded-lg border border-gunmetal bg-carbon px-4 py-2 text-sm font-semibold text-whiteish transition hover:bg-graphite">
+            Let&apos;s connect
           </a>
         </div>
         <button
           type="button"
           aria-label="Toggle navigation"
           onClick={() => setOpen((value) => !value)}
-          className="rounded-lg border border-white/15 p-2 text-white lg:hidden"
+          className="rounded-lg border border-gunmetal bg-carbon p-2 text-whiteish lg:hidden"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </nav>
       <div
         className={cn(
-          "grid border-t border-white/10 bg-primary transition-all duration-300 lg:hidden",
+          "grid border-t border-gunmetal bg-shadow transition-all duration-300 lg:hidden",
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         )}
       >
@@ -54,18 +50,13 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-sm font-medium text-white/90 transition hover:bg-white/10 hover:text-warm"
+                className="rounded-lg px-3 py-3 text-sm font-medium text-cloud transition hover:bg-carbon hover:text-whiteish"
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href={profile.cv}
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-warm px-4 py-3 text-sm font-bold text-primary transition hover:bg-white"
-            >
-              <Download size={16} />
-              Download CV
+            <a href="#contact" onClick={() => setOpen(false)} className="mt-2 inline-flex items-center justify-center rounded-lg bg-whiteish px-4 py-3 text-sm font-bold text-onyx transition hover:bg-cloud">
+              Contact Me
             </a>
           </div>
         </div>
